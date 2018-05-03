@@ -1,0 +1,12 @@
+<p>Inscris toi !</p>
+
+
+<form action="/new" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	Ton nom :<br>
+  	<input type="text" name="name">
+  	<br><br>
+  	<input type="submit" value="S'inscrire">
+</form>
+
+<a href="/">Retourner à l'accueil</a>

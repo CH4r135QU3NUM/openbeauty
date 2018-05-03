@@ -1,0 +1,16 @@
+
+
+<% if @current_user %>
+
+  <h1>Bienvenue <%= @current_user.name %> !</h1>
+
+<% else %>
+
+  <h1>Bienvenue visiteur anonyme !</h1>
+
+  <a href="/new">Inscris toi</a> <br> <br> <p>ou si tu as déjà un compte</p>  <br>
+<a href="login">Connecte toi</a>
+
+<% end %>
+
+

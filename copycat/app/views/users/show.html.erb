@@ -1,0 +1,14 @@
+
+
+<% if @current_user %>
+
+  <h1>Bienvenue <%= @current_user.name %> !</h1>
+<a href="/">Poster une Annonce ou accéder aux évènements</a>
+
+<% else %>
+
+  <h1>Bienvenue, serais ce la première connexion ? </h1>
+
+  <a href="/login">S'identifier</a>
+
+<% end %>
