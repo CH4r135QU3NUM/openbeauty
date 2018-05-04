@@ -1,0 +1,28 @@
+<h1>Propose ta journée pour coiffer ton model gratuitement</h1>
+
+
+
+
+
+
+
+
+
+<%= form_tag "/new", method: :post do %>
+
+  <p>Décris nous le model que tu recherche exemple : "Femme cheveux mi-long"</p><input type="text" name="description" />
+
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<p>L'heure à laquelle la prestation sera réalisé exemple "18:00"</p><input type="datetime" name="date" />
+ <p>La ville de la prestation</p> <input type="text" name="place" />
+
+  <input type="submit" value="Créér l'évènement" /> <br> <br>
+
+<a href="/">Retourner à l'accueil</a>
+ <p> Liste des évènements proposant une coupe de cheveux gratuite </p>
+<%= @events.each do |event| %>
+    
+<%= @event.description %>
+
+<% end %>
+<% end %>
